@@ -1,4 +1,4 @@
--- Assignment 17: Write a PL/SQL procedure to insert a student record into the Student table.
+-- Assignment 18: Write a PL/SQL function to count the number of students available in a particular department.
 -- Table Schema for Reference:
 -- CREATE TABLE Student (
 --     student_id NUMBER PRIMARY KEY,
@@ -7,14 +7,12 @@
 --     marks NUMBER
 -- );
 
-CREATE OR REPLACE PROCEDURE insert_student (
-    p_id IN NUMBER,
-    p_name IN VARCHAR2,
-    p_dept IN VARCHAR2,
-    p_marks IN NUMBER
-) AS
+CREATE OR REPLACE FUNCTION count_students_in_dept (
+    p_dept IN VARCHAR2
+) RETURN NUMBER IS
+    v_count NUMBER := 0;
 BEGIN
     -- WRITE YOUR CODE HERE
-    NULL;
-END insert_student;
+    RETURN v_count;
+END count_students_in_dept;
 /
